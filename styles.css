@@ -1,0 +1,553 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    text-align: center;
+    background: #171717;
+    padding: 0;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+/* ----------------------------------- Home section: ------------------------------------- */
+
+#homeSection {
+    margin: 25px;
+}
+
+
+/* ---------------------------- Parallax scrolling img: --------------------------------- */
+
+.parallax {
+    background-image: url("assets/images/paralax-img/Financial-technology.jpg");
+    min-height: 617px;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    text-align: center;
+    position: sticky;
+    box-shadow: 0px 0px 8px 8px rgba(14, 25, 58, 0.714);
+}
+
+
+/* -------------------------------------- Header: --------------------------------------- */
+
+h1 {
+    font-size: 55px;
+    color: #0e0e45f4;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-top: 0px;
+    font-family: 'Monoton', cursive;
+    padding: 170px;
+
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #132380, 0 0 40px #0f147d, 0 0 50px #100a7a, 0 0 60px #070c68, 0 0 70px #1e1069;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #4da0ff, 0 0 40px #4db2ff, 0 0 50px #4db2ff, 0 0 60px #4dcaff, 0 0 70px #4dacff, 0 0 80px #4da6ff;
+    }
+}
+
+
+/* -------------------------------- navigation bar: ------------------------------------- */
+
+.nav {
+    width: 100%;
+    height: 49px;
+    background-color: #020219d1;
+    /* sticky: */
+    position: fixed;
+    z-index: 1;
+}
+
+.nav a {
+    text-decoration: none;
+    float: left;
+    color: #fff;
+    padding: 14px 26px;
+    font-size: 17px;
+    transition: 0.6s all;
+}
+
+.nav a:hover {
+    background-color: rgba(74, 196, 240, 0.693);
+
+}
+
+.nav .search {
+    float: right;
+}
+
+.nav input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    border: none;
+    font-size: 17px;
+    margin-right: 8px;
+}
+
+.nav .search button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.nav .search button:hover {
+    background-color: rgba(74, 196, 240, 0.693);
+    color: #fff;
+}
+
+
+/* ------------------------------------ Scroll bar: ------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(85, 85, 85);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(12, 17, 93);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(74, 196, 240, 0.693);
+}
+
+
+/* ---------------------------- Background + Play&Pause btn: ---------------------------- */
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(12, 7, 43, 0.551);
+    color: rgb(183, 183, 220);
+    width: 24%;
+    left: 37%;
+    padding: 8px;
+    z-index: 1;
+}
+
+#myBtn {
+    width: 173px;
+    font-size: 16px;
+    padding: 0;
+    border: none;
+    background: rgb(1, 14, 47);
+    color: rgb(167, 153, 197);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#myBtn:hover {
+    background: rgb(167, 153, 197);
+    color: rgb(1, 14, 47);
+}
+
+
+/* ----------------------------------- Coins cards: ------------------------------------- */
+
+.card {
+    width: 190px;
+    height: 153px;
+    border: 0.5px solid rgba(47, 47, 141, 0.285);
+    display: inline-block;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 6px;
+    overflow: auto;
+    backdrop-filter: blur(25px);
+    font-family: 'Ruda', sans-serif;
+    font-weight: 600;
+    color: rgb(183, 183, 220);
+}
+
+.card:hover {
+    background: linear-gradient(-45deg, #ece9f13a, #aa9cc33d, #51c3b642, #ac9fc23d);
+}
+
+
+/* -------------------------------- more info - Button: --------------------------------- */
+
+.moreInfo-btn {
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    background-size: 800% 400%;
+    padding: 0.4em 1.1em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+.moreInfo-btn:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+}
+
+.card-btn:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ------------------------------------ Checkboxes: ------------------------------------- */
+
+.switch {
+    font-size: 9.5px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    top: -3px;
+    left: 64px;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(159, 146, 171);
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #53bcdb;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #53bcdb;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.5em);
+}
+
+
+/* ------------------------------------- Spinner: --------------------------------------- */
+
+.spinner {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot1,
+.dot2,
+.dot3 {
+    width: 8px;
+    height: 8px;
+    border: double;
+    border-color: rgba(22, 26, 64, 0.572);
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.dot1 {
+    animation: jump765 1.6s -0.32s linear infinite;
+    background: #2495ffd7;
+}
+
+.dot2 {
+    animation: jump765 1.6s -0.16s linear infinite;
+    background: #2495ffbd;
+}
+
+.dot3 {
+    animation: jump765 1.6s linear infinite;
+    background: #2495ffbd;
+}
+
+@keyframes jump765 {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(2.0);
+        transform: scale(2.0);
+    }
+}
+
+
+/* -------------------------------------- Modal: ---------------------------------------- */
+
+#myModal {
+    position: fixed;
+    visibility: hidden;
+}
+
+#modalCard {
+    height: 116px;
+    width: 165px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#modalDiv {
+    text-align: center;
+    display: inline-block;
+    border: none;
+}
+
+#modalCoinName {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.modalContent {
+    box-shadow: 0px 0px 5px 5px rgba(8, 8, 8, 0.445);
+}
+
+#modalDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content {
+    backdrop-filter: blur(10px);
+    width: 650px;
+    height: 470px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(8, 8, 8, 0.445);
+    background-image: url(assets/images/madal-bg/modal-bg.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal-body {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.modal-title {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.btn-modalBtn {
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    background-size: 800% 400%;
+    padding: 0.4em 1.1em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+.modal-footer {
+    margin: 10px;
+}
+
+.btn-modalBtn:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+}
+
+.btn-modalBtn:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+/* ------------------------------- Live report section: ---------------------------------- */
+
+#reportSection {
+    margin: 30px;
+    padding-bottom: 30px;
+}
+
+#chart-container {
+    box-shadow: 0px 0px 5px 5px rgba(8, 8, 8, 0.445);
+}
+
+.liveReportHeader{
+    font-family: 'Bungee', cursive;
+    font-size: 46px;
+    color: rgb(1, 14, 47);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.423);
+    -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+/* ---------------------------------- about section: ------------------------------------- */
+
+.aboutDiv {
+    padding: 20px;
+    margin: 15px;
+}
+
+.aboutHeader {
+    font-family: 'Bungee', cursive;
+    font-size: 46px;
+    color: rgb(1, 14, 47);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.423);
+    -webkit-text-stroke: 0.1px rgb(255, 255, 255);
+}
+
+.aboutSpan {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-family: Segoe UI Light;
+    backdrop-filter: blur(25px);
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 3px 3px 5px 5px rgba(27, 25, 25, 0.423);
+    border-radius: 10px;
+    color: white;
+}
+
+.h3 {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.logoSpan {
+    align-items: center;
+}
+
+.facebook-img {
+    margin: 5px;
+}
+
+.instagram-img {
+    margin: 5px;
+}
+
+.linkedin-img {
+    margin: 5px;
+}
+
+.imgDiv {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.firstImg {
+    width: 200px;
+    height: 310px;
+    margin: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(8, 8, 8, 0.445);
+}
+
+.secondImg {
+    width: 450px;
+    height: 310px;
+    margin: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(8, 8, 8, 0.445);
+}

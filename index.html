@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cryptocurrency Project</title>
+
+    <!-------------------------------- H1 header font ------------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+
+    <!-------------------------------- card header font ----------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruda&display=swap" rel="stylesheet">
+
+
+    <!------------------------------ more info button font -------------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+    <!---------------------------- H1 Header - about section ------------------------------>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="jquery-3.6.0.js"></script>
+
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+    <script defer src="main.js"></script>
+
+</head>
+
+<body>
+
+    <!--------------------------------- background video ---------------------------------->
+
+    <video autoplay muted loop id="myVideo">
+        <source src="assets/bgVideo/vecteezy_blue-honeycomb-shapes-matte-surface-moving_1971371.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="content">
+        <button id="myBtn" onclick="playAndPause()">Pause background</button>
+    </div>
+
+
+    <!-------------------------------------- navbar --------------------------------------->
+
+    <div class="nav">
+        <a href="javascript:void(0)" data-section="homeSection">Home</a>
+
+        <a href="javascript:void(0)" data-section="reportSection">Live Report</a>
+
+        <a href="javascript:void(0)" data-section="aboutSection">About</a>
+        <div class="search">
+            <form>
+                <input type="text" placeholder="search..." id="search">
+            </form>
+        </div>
+    </div>
+
+
+    <!------------------------------- Parallax & Header ---------------------------------->
+
+    <div id="homeImg" class="parallax">
+        <h1>
+            Crypto currency <br />
+            Project
+        </h1>
+    </div>
+
+
+    <!------------------------------------ Sections -------------------------------------->
+    <section id="homeSection"></section>
+
+    <section id="reportSection"></section>
+
+    <section id="aboutSection"></section>
+
+
+    <!-- ------------------------------------Modal------------------------------------ -->
+    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" id="modalDialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">You can only select 5 coins</h5>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <p id="modalBody"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modalBtn" id="keepCurrent" data-dismiss="modal">
+                        Cancel
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
