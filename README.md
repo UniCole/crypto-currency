@@ -1,5 +1,5 @@
-# Second project from "John Bryce" college
-## HTML, CSS, Javascript, JQuery
+# Crypto Currency Project
+## Second project from "John Bryce" college based on: HTML, CSS, Javascript, JQuery
 
 ### Project requirements:
 ##### Live server plugin for VScode
